@@ -42,7 +42,9 @@ app.post('/addSchool', (req, res) => {
     res.status(201).json({ message: 'School added successfully.', schoolId: result.insertId });
   });
 });
-
+app.get('/',(req,res)=>{
+    res.send("Api is running")
+})
 // List Schools API
 app.get('/listSchools', (req, res) => {
   const { userLatitude, userLongitude } = req.query;
